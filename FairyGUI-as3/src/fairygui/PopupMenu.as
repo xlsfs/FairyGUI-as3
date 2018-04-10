@@ -260,7 +260,10 @@ package fairygui
 				if(item.data.length==1)
 					item.data(evt);
 				else
-					item.data();
+				{
+					var func:Function = item.data as Function; 
+					func();
+				}
 			}
 		}
 		
